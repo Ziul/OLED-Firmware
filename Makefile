@@ -37,6 +37,11 @@ OLED: force_look
 force_look:
 #	true
 
+#Gerando documentação	
+gen-docs: $(HDR) $(SRC) 
+	$(DOXYGEN) $(DOXYGENFLAGS)
+	cd ./doc/gen/latex; $(MAKE) ; rm -f *.ps *.dvi *.aux *.toc *.idx *.ind *.ilg *.log *.out *.brf *.blg *.bbl ; cp *.pdf ../$(NAME).pdf
+
 test: $(NAME)
 	@echo "Entering" $(PWD)/$(TEST_DIR) "..."	
 	cd $(TEST_DIR); $(MAKE) $(MFLAGS)

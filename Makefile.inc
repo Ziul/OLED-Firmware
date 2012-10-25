@@ -1,6 +1,16 @@
 NAME = GLCD
 
 #########################################
+#				Doxygen 				#
+#########################################
+
+# doxygen executable
+DOXYGEN = doxygen
+
+# doxygen flags
+DOXYGENFLAGS = ./doxygen.conf
+
+#########################################
 #				msp430-gcc				#
 #		libs in /usr/msp430/lib/		#
 #########################################
